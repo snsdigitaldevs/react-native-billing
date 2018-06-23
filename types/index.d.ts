@@ -41,11 +41,11 @@ export interface ISubscriptionDetails extends IProductDetails {
 }
 
 export default class InAppBilling {
-  static open(): Promise<void>;
+  static open(productId: string): Promise<void>;
 
-  static close(): Promise<void>;
+  static close(productId: string): Promise<void>;
 
-  static loadOwnedPurchasesFromGoogle(): Promise<any>;
+  static loadOwnedPurchasesFromGoogle(productId: string): Promise<any>;
 
   static purchase(
     productId: string,
@@ -72,13 +72,13 @@ export default class InAppBilling {
 
   static isPurchased(productId: string): Promise<boolean>;
 
-  static isOneTimePurchaseSupported(): Promise<boolean>;
+  static isOneTimePurchaseSupported(productId: string): Promise<boolean>;
 
   static isValidTransactionDetails(productId: string): Promise<boolean>;
 
-  static listOwnedProducts(): Promise<string[]>;
+  static listOwnedProducts(productId: string): Promise<string[]>;
 
-  static listOwnedSubscriptions(): Promise<string[]>;
+  static listOwnedSubscriptions(productId: string): Promise<string[]>;
 
   static getProductDetails(productId: string): Promise<IProductDetails>;
 

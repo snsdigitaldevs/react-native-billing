@@ -4,15 +4,15 @@ const InAppBillingBridge = require("react-native").NativeModules
   .InAppBillingBridge;
 
 class InAppBilling {
-  static open() {
-    return InAppBillingBridge.open();
+  static open(productId) {
+    return InAppBillingBridge.open(productId);
   }
 
-  static close() {
-    return InAppBillingBridge.close();
+  static close(productId) {
+    return InAppBillingBridge.close(productId);
   }
 
-  static loadOwnedPurchasesFromGoogle() {
+  static loadOwnedPurchasesFromGoogle(productId) {
     return InAppBillingBridge.loadOwnedPurchasesFromGoogle();
   }
 
@@ -40,24 +40,24 @@ class InAppBilling {
     return InAppBillingBridge.isPurchased(productId);
   }
 
-  static isOneTimePurchaseSupported() {
-    return InAppBillingBridge.isOneTimePurchaseSupported();
+  static isOneTimePurchaseSupported(productId) {
+    return InAppBillingBridge.isOneTimePurchaseSupported(productId);
   }
 
   static isValidTransactionDetails(productId) {
     return InAppBillingBridge.isValidTransactionDetails(productId);
   }
 
-  static listOwnedProducts() {
-    return InAppBillingBridge.listOwnedProducts();
+  static listOwnedProducts(productId) {
+    return InAppBillingBridge.listOwnedProducts(productId);
   }
 
-  static listOwnedSubscriptions() {
-    return InAppBillingBridge.listOwnedSubscriptions();
+  static listOwnedSubscriptions(productId) {
+    return InAppBillingBridge.listOwnedSubscriptions(productId);
   }
 
   static getProductDetails(productId) {
-    return InAppBillingBridge.getProductDetails([productId])
+    return InAppBillingBridge.getProductDetails(productId, [productId])
       .then(arr => {
         if (arr != null && arr.length > 0) {
           return Promise.resolve(arr[0]);
@@ -78,8 +78,8 @@ class InAppBilling {
     return InAppBillingBridge.getSubscriptionTransactionDetails(productId);
   }
 
-  static getProductDetailsArray(productIds) {
-    return InAppBillingBridge.getProductDetails(productIds);
+  static getProductDetailsArray(productId, productIds) {
+    return InAppBillingBridge.getProductDetails(productId, productIds);
   }
 
   static getSubscriptionDetails(productId) {
@@ -96,8 +96,8 @@ class InAppBilling {
       });
   }
 
-  static getSubscriptionDetailsArray(productIds) {
-    return InAppBillingBridge.getSubscriptionDetails(productIds);
+  static getSubscriptionDetailsArray(productId, productIds) {
+    return InAppBillingBridge.getSubscriptionDetails(productId, productIds);
   }
 
   static shortCircuitPurchaseFlow(enable) {

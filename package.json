@@ -1,17 +1,43 @@
 {
-  "name": "react-native-billing",
-  "version": "2.9.1",
+  "_args": [
+    [
+      "react-native-billing@2.9.1",
+      "/Users/Jingqiang/Desktop/Pimsleur"
+    ]
+  ],
+  "_from": "react-native-billing@2.9.1",
+  "_id": "react-native-billing@2.9.1",
+  "_inBundle": false,
+  "_integrity": "sha512-NxWKlezKls6JKtmySFTIytN34YzXaonYOa0LHl5mlmg0PfmL9Q07r8Zm+9AS0wMYuwgIndBN5/fzYR8fC2+twA==",
+  "_location": "/react-native-billing",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "react-native-billing@2.9.1",
+    "name": "react-native-billing",
+    "escapedName": "react-native-billing",
+    "rawSpec": "2.9.1",
+    "saveSpec": null,
+    "fetchSpec": "2.9.1"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-billing/-/react-native-billing-2.9.1.tgz",
+  "_spec": "2.9.1",
+  "_where": "/Users/Jingqiang/Desktop/Pimsleur",
+  "author": {
+    "name": "Idéhub AS"
+  },
+  "bugs": {
+    "url": "https://github.com/idehub/react-native-billing/issues"
+  },
   "description": "React Native bridge for InApp Billing on Android",
-  "main": "index.js",
-  "types": "./types/index.d.ts",
-  "scripts": {
-    "test": "npm run dtslint",
-    "dtslint": "dtslint types"
+  "devDependencies": {
+    "dtslint": "^0.3.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/idehub/react-native-billing.git"
-  },
+  "homepage": "https://github.com/idehub/react-native-billing#readme",
   "keywords": [
     "react",
     "native",
@@ -22,18 +48,22 @@
     "android",
     "bridge"
   ],
-  "author": "Idéhub AS",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/idehub/react-native-billing/issues"
+  "main": "index.js",
+  "name": "react-native-billing",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idehub/react-native-billing.git"
   },
-  "homepage": "https://github.com/idehub/react-native-billing#readme",
   "rnpm": {
     "android": {
       "packageInstance": "new InAppBillingBridgePackage()"
     }
   },
-  "devDependencies": {
-    "dtslint": "^0.3.0"
-  }
+  "scripts": {
+    "dtslint": "dtslint types",
+    "test": "npm run dtslint"
+  },
+  "types": "./types/index.d.ts",
+  "version": "2.9.1"
 }
