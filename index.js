@@ -83,7 +83,7 @@ class InAppBilling {
   }
 
   static getSubscriptionDetails(productId) {
-    return InAppBillingBridge.getSubscriptionDetails([productId])
+    return InAppBillingBridge.getSubscriptionDetails(productId, [productId])
       .then(arr => {
         if (arr != null && arr.length > 0) {
           return Promise.resolve(arr[0]);
