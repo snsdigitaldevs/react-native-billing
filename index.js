@@ -13,7 +13,7 @@ class InAppBilling {
   }
 
   static loadOwnedPurchasesFromGoogle(productId) {
-    return InAppBillingBridge.loadOwnedPurchasesFromGoogle();
+    return InAppBillingBridge.loadOwnedPurchasesFromGoogle(productId);
   }
 
   static purchase(productId, developerPayload = null) {
